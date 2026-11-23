@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "verified_at": "2026-11-23T12:52:36.842824+07:00",
+  "test_records": 200,
+  "visual_groups": 197,
+  "primary_predeclared": "dual_full_asymmetric",
+  "test_archive_sha256": "14b3e59423d501283f952ecdb4d4f1a3ba8e5fd36aeb14f05cfae7918dd5d598",
+  "summary_sha256": "7384f120811c35e9c293a798b21fba53684366ba3359164f3d9ea2c4c62006cd",
+  "groupwise_sha256": "a6f30a9f0c8e5dd51ac58815832da833393c7d3ffe76d731d5461cb8c349bfc7",
+  "per_record_sha256": "6ee7fbeadef3f5edc575b138158d78fd493812a3e5df778f01ac8ea50d0fd921",
+  "official_test_completed": true,
+  "no_test_time_model_selection": true
+}

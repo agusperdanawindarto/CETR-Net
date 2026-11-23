@@ -1,0 +1,32 @@
+{
+  "source_kernel": "agusperdana/cetr-v2-full-refiner-seed2025-routing",
+  "source_account_for_backbone": "ardhanabdillah",
+  "destination_account": "agusperdana",
+  "seed": 2025,
+  "group": "routing",
+  "official_test_scored": false,
+  "train_images": 508,
+  "val_images": 90,
+  "protocol": "Frozen independently trained seed-matched backbone, 8 epoch full-data ablations",
+  "variants": {
+    "dual_geometry": {
+      "best_validation_dice": 0.8541222969332763,
+      "best_epoch": 4,
+      "epochs": 8,
+      "head_sha256": "69f6adc8acdf6d8d66ba2299fccd93cc041a7daca9a8313deb328ed47fda162b"
+    },
+    "dual_confidence": {
+      "best_validation_dice": 0.8562766275598924,
+      "best_epoch": 2,
+      "epochs": 8,
+      "head_sha256": "689e5efe5515f7cf4642bc23e8deb3443ce9b011b9fe0caa48c4ae0fe4e0871f"
+    },
+    "dual_full_asymmetric": {
+      "best_validation_dice": 0.8567961616064461,
+      "best_epoch": 2,
+      "epochs": 8,
+      "head_sha256": "4d7d9181cb6303f0b86e6f798461bae1a201aaba625f5115a29921ea3bb4dc33"
+    }
+  },
+  "verified_at": "2026-11-23T03:33:54.290135+07:00"
+}

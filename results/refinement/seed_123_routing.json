@@ -1,0 +1,29 @@
+{
+  "source_kernel": "ardhanabdillah/cetr-v2-full-refiner-seed123-routing",
+  "seed": 123,
+  "group": "routing",
+  "variants": {
+    "dual_geometry": {
+      "best_epoch": 5,
+      "best_validation_dice": 0.8640993643084438,
+      "best_head_sha256": "a449403cced00adddaaa8ae1ee6bd082cac82bd0e68b9737f8fc2e49d0cfcf45",
+      "epochs": 8
+    },
+    "dual_confidence": {
+      "best_epoch": 4,
+      "best_validation_dice": 0.8658650429990753,
+      "best_head_sha256": "b5289bca04b7ec63be177ec71c4f00546a994992a7afaf88ff4e37d1abdd4093",
+      "epochs": 8
+    },
+    "dual_full_asymmetric": {
+      "best_epoch": 1,
+      "best_validation_dice": 0.866456985242623,
+      "best_head_sha256": "023ff4a04e67f8151aa5929603dfcf09ceb317cb93cf1b17371b6963fc924432",
+      "epochs": 8
+    }
+  },
+  "verified_at": "2026-11-22T12:12:15.872772+07:00",
+  "official_test_scored": false,
+  "protocol": "FIVES V2 508 train/90 val; no inference GT filtering",
+  "notes": "Frozen seed-matched independent backbone; not an end-to-end backbone retraining"
+}

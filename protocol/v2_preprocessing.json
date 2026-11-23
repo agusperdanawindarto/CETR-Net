@@ -1,0 +1,89 @@
+{
+  "title": "Counterfactual Evidence-Constrained Topology Refinement for Retinal Vessel Segmentation",
+  "method": "CETR-Net",
+  "protocol": "V2 pHash-SSIM-ORB-screened group-disjoint",
+  "dataset": {
+    "name": "FIVES",
+    "official_train": 600,
+    "official_test": 200,
+    "excluded_train_records": [
+      "official_train/466_n",
+      "official_train/472_n"
+    ],
+    "train": 508,
+    "validation": 90,
+    "test_annotation_records": 200,
+    "visually_grouped_test_sources": 197,
+    "manifest": "SPLITS_NEARDUP_SAFE_V2",
+    "caveat": "Not proven patient-disjoint or exhaustive near-duplicate clearance"
+  },
+  "training": {
+    "resolution": [
+      512,
+      512
+    ],
+    "seeds": [
+      42,
+      123,
+      2025
+    ],
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "batch_size": 4,
+    "epochs_max": 120,
+    "patience": 15,
+    "augmentation": "train-only flips RGB brightness/contrast",
+    "selection": "validation only",
+    "evaluation": "official test once, after model selection"
+  },
+  "research_questions": {
+    "RQ1": [
+      "unperturbed",
+      "restore-only counterfactual",
+      "reject-only counterfactual",
+      "dual-error counterfactual"
+    ],
+    "RQ2": [
+      "geometry-only",
+      "entropy-confidence-only",
+      "RGB evidence routing",
+      "matched-capacity routing"
+    ],
+    "RQ3": [
+      "Dice",
+      "IoU",
+      "clDice",
+      "boundaryF1",
+      "thin-vessel recall",
+      "restoration precision/recall",
+      "false-link acceptance",
+      "cross-dataset DRIVE",
+      "FLOPs",
+      "latency/FPS",
+      "peak GPU memory"
+    ]
+  },
+  "baselines": [
+    "U-Net",
+    "ResUNet",
+    "Attention U-Net",
+    "MS-SE Attention U-Net",
+    "MaskVSC if reproducible"
+  ],
+  "hard_rules": [
+    "No FIVES test labels in training or threshold/model selection",
+    "All comparison models use identical V2 train/validation/test grouping",
+    "Historic V1 baseline metrics are historical context only",
+    "No claim of CETR-Net superiority until actual full experiments plus ablation and repeatability"
+  ],
+  "execution_status": {
+    "dataset_integrity": "verified",
+    "near_duplicates": "screened, manual review necessary",
+    "gpu_batch4": "passed on development examples",
+    "backbone_seed42": "running",
+    "other_seeds": "not run",
+    "refiner": "prototype not full-trained",
+    "ablations": "not run",
+    "official_test": "untouched"
+  }
+}

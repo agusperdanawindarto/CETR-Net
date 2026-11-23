@@ -1,0 +1,35 @@
+{
+  "source_kernel": "ardhanabdillah/cetr-v2-full-refiner-seed2025-cdes",
+  "seed": 2025,
+  "group": "cdes",
+  "variants": {
+    "natural_full_symmetric": {
+      "best_epoch": 1,
+      "best_validation_dice": 0.8569453616431673,
+      "best_head_sha256": "bd5aee160683841400b4f4a474009d1fb79719350e189721ef6d41456194196c",
+      "epochs": 8
+    },
+    "break_only": {
+      "best_epoch": 4,
+      "best_validation_dice": 0.8576953808440945,
+      "best_head_sha256": "a6558a51badc37da8ddaf73684ad3e6432ec73fba87ee159b9b0015b2559096f",
+      "epochs": 8
+    },
+    "false_only": {
+      "best_epoch": 8,
+      "best_validation_dice": 0.8573609456252834,
+      "best_head_sha256": "db161fbbd4ba9a6b29437fcd18a7964e386b7b2d8967f952e20bea3a343fa12c",
+      "epochs": 8
+    },
+    "dual_full_symmetric": {
+      "best_epoch": 1,
+      "best_validation_dice": 0.8568354866340568,
+      "best_head_sha256": "995e006dc36fbca0f41873119fb7409325e3502f5d6ff2b27fbaf8dcf7029049",
+      "epochs": 8
+    }
+  },
+  "verified_at": "2026-11-22T19:53:26.095732+07:00",
+  "official_test_scored": false,
+  "protocol": "FIVES V2 508 train/90 val; no inference GT filtering",
+  "notes": "Frozen seed-matched independent backbone; not an end-to-end backbone retraining"
+}

@@ -1,0 +1,27 @@
+{
+  "job": "ardhanabdillah/cetr-v2-independent-backbones",
+  "status": "COMPLETE",
+  "seeds": [
+    123,
+    2025
+  ],
+  "metrics": {
+    "123": {
+      "best_epoch": 37,
+      "best_val_soft_dice": 0.8448211696412828,
+      "epochs_logged": 45,
+      "checkpoint_available": true
+    },
+    "2025": {
+      "best_epoch": 42,
+      "best_val_soft_dice": 0.8419963198416452,
+      "epochs_logged": 45,
+      "checkpoint_available": true
+    }
+  },
+  "official_test_scored": false,
+  "checkpoint_sha256": {
+    "cetr_v2\\runs\\seed_123\\warmup_V2_FULL\\best_backbone.weights.h5": "3e0adf446a4e107a0596bc5972751b94c41425b26a8ee2e017259c73a55c1a74",
+    "cetr_v2\\runs\\seed_2025\\warmup_V2_FULL\\best_backbone.weights.h5": "cc2018e7a2713d9447e3a1a9d4f94243224e3dafff6aaec44d001d0dc4b18f75"
+  }
+}

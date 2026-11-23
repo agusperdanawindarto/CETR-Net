@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+.env
+*.env
+kaggle.json
+**/fives_v2_trainval_512.zip
+**/fives_v2_official_heldout_512.zip
+**/*.weights.h5
+*.ckpt
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,38 @@
+{
+  "source_kernel": "agusperdana/cetr-v2-full-refiner-seed42-cdes",
+  "source_account_for_backbone": "ardhanabdillah",
+  "destination_account": "agusperdana",
+  "seed": 42,
+  "group": "cdes",
+  "official_test_scored": false,
+  "train_images": 508,
+  "val_images": 90,
+  "protocol": "Frozen independently trained seed-matched backbone, 8 epoch full-data ablations",
+  "variants": {
+    "natural_full_symmetric": {
+      "best_validation_dice": 0.8735845696341937,
+      "best_epoch": 1,
+      "epochs": 8,
+      "head_sha256": "570e6de5fff72a7896a548e5fd48cfee129c98f739a84228f91247032ea5350f"
+    },
+    "break_only": {
+      "best_validation_dice": 0.872706270422846,
+      "best_epoch": 8,
+      "epochs": 8,
+      "head_sha256": "077ff91a88085c3b089c78dfccda813cb44d457a1a2b0b03025d844574c2ecf7"
+    },
+    "false_only": {
+      "best_validation_dice": 0.8739032942089453,
+      "best_epoch": 8,
+      "epochs": 8,
+      "head_sha256": "3506169b6815dd7c84f774c9b7ab18aad837c284156e5315c45ee03cabcba6b8"
+    },
+    "dual_full_symmetric": {
+      "best_validation_dice": 0.873111013989777,
+      "best_epoch": 1,
+      "epochs": 8,
+      "head_sha256": "354c554dae738d9dc2adade89987a61052303d8add4f0ff2230e036263dccc7a"
+    }
+  },
+  "verified_at": "2026-11-23T08:03:43.852508+07:00"
+}

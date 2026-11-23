@@ -1,0 +1,243 @@
+{
+  "title": "CETR-Net FIVES V2 one-time held-out evaluation, pre-registered from VALIDATION ONLY",
+  "frozen_utc": "2026-11-23T03:35:36.231595+00:00",
+  "dataset_protocol": "FIVES_V2_NEARDUP_SCREENED",
+  "test_archive_sha256": "14b3e59423d501283f952ecdb4d4f1a3ba8e5fd36aeb14f05cfae7918dd5d598",
+  "test_records": 200,
+  "unique_visual_groups": 197,
+  "training_records_per_seed": 508,
+  "validation_records_per_seed": 90,
+  "seeds": [
+    42,
+    123,
+    2025
+  ],
+  "threshold": 0.5,
+  "metric_definitions": {
+    "dice": "(2*intersection+1)/(pred_area+gt_area+1)",
+    "iou": "(intersection+1)/(union+1)",
+    "cldice": "centerline Dice using binary skeleton",
+    "aggregate": "unweighted mean of 197 visually grouped case means",
+    "ci": "2000 paired cluster bootstrap resamples at 197 visual group level"
+  },
+  "primary_predeclared": "dual_full_asymmetric",
+  "primary_comparator": "independent_backbone",
+  "secondary_variants": [
+    "natural_full_symmetric",
+    "break_only",
+    "false_only",
+    "dual_full_symmetric",
+    "dual_geometry",
+    "dual_confidence",
+    "dual_full_asymmetric"
+  ],
+  "ablation_reviewer_check_passed": true,
+  "model_selection_source": "validation only, best epoch for each of 21 configurations",
+  "validation_best_variants_descriptive_only": {
+    "42": {
+      "variant": "false_only",
+      "validation_dice": 0.8739032942089453
+    },
+    "123": {
+      "variant": "false_only",
+      "validation_dice": 0.8678123061242637
+    },
+    "2025": {
+      "variant": "break_only",
+      "validation_dice": 0.8576953808440945
+    }
+  },
+  "code_sha256": {
+    "cetr_core_ablation.py": "3228cd0d4d50e559421ed017045cb14fd57deb8fcd9ed45a31e6a936bf9b7f8c",
+    "cetr_v2_suite.py": "cc209d9ea2e6ec39a680f6ba75ec10e173e3c85c8bbc97df989a1abe816f7329"
+  },
+  "backbones_sha256": {
+    "42": "3a6b1a472ec49779ec9e6464277a8ee2e299b3c5a1500af697c39a6b2b4c79d9",
+    "123": "3e0adf446a4e107a0596bc5972751b94c41425b26a8ee2e017259c73a55c1a74",
+    "2025": "cc2018e7a2713d9447e3a1a9d4f94243224e3dafff6aaec44d001d0dc4b18f75"
+  },
+  "variants": {
+    "42": {
+      "natural_full_symmetric": {
+        "checkpoint_file": "heads/seed42_natural_full_symmetric.npz",
+        "checkpoint_sha256": "570e6de5fff72a7896a548e5fd48cfee129c98f739a84228f91247032ea5350f",
+        "best_validation_dice": 0.8735845696341937,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-cdes",
+        "epochs_completed": 8
+      },
+      "break_only": {
+        "checkpoint_file": "heads/seed42_break_only.npz",
+        "checkpoint_sha256": "077ff91a88085c3b089c78dfccda813cb44d457a1a2b0b03025d844574c2ecf7",
+        "best_validation_dice": 0.872706270422846,
+        "best_validation_epoch": 8,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-cdes",
+        "epochs_completed": 8
+      },
+      "false_only": {
+        "checkpoint_file": "heads/seed42_false_only.npz",
+        "checkpoint_sha256": "3506169b6815dd7c84f774c9b7ab18aad837c284156e5315c45ee03cabcba6b8",
+        "best_validation_dice": 0.8739032942089453,
+        "best_validation_epoch": 8,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-cdes",
+        "epochs_completed": 8
+      },
+      "dual_full_symmetric": {
+        "checkpoint_file": "heads/seed42_dual_full_symmetric.npz",
+        "checkpoint_sha256": "354c554dae738d9dc2adade89987a61052303d8add4f0ff2230e036263dccc7a",
+        "best_validation_dice": 0.873111013989777,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-cdes",
+        "epochs_completed": 8
+      },
+      "dual_geometry": {
+        "checkpoint_file": "heads/seed42_dual_geometry.npz",
+        "checkpoint_sha256": "66d6e185365b2a3d1aca2627ccfcb4eb761f24aad9ba6c849dc7b9e0a1aaef82",
+        "best_validation_dice": 0.869432197745629,
+        "best_validation_epoch": 2,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-routing",
+        "epochs_completed": 8
+      },
+      "dual_confidence": {
+        "checkpoint_file": "heads/seed42_dual_confidence.npz",
+        "checkpoint_sha256": "e54a88090ea95b31f171df2fb2624b6fb8fb361f9ad8b7cb23603ea65c536da7",
+        "best_validation_dice": 0.8725040514303666,
+        "best_validation_epoch": 4,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-routing",
+        "epochs_completed": 8
+      },
+      "dual_full_asymmetric": {
+        "checkpoint_file": "heads/seed42_dual_full_asymmetric.npz",
+        "checkpoint_sha256": "28a8b632bca1e1fc549e0c727c2b683bb4d1b58d3f859fa36ff62b3ae76bae3a",
+        "best_validation_dice": 0.8731183252080015,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed42-routing",
+        "epochs_completed": 8
+      }
+    },
+    "123": {
+      "natural_full_symmetric": {
+        "checkpoint_file": "heads/seed123_natural_full_symmetric.npz",
+        "checkpoint_sha256": "aec6f4ee67bb4b2149e61f60abb513de2c62e7be53493c0c700f3b93b8397c13",
+        "best_validation_dice": 0.8669065815300655,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-cdes",
+        "epochs_completed": 8
+      },
+      "break_only": {
+        "checkpoint_file": "heads/seed123_break_only.npz",
+        "checkpoint_sha256": "5adb44840ce9aa2e5b826fd0583c57242109f0915bd32d9e95470049af82cbab",
+        "best_validation_dice": 0.8670830555934117,
+        "best_validation_epoch": 2,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-cdes",
+        "epochs_completed": 8
+      },
+      "false_only": {
+        "checkpoint_file": "heads/seed123_false_only.npz",
+        "checkpoint_sha256": "04406e455a253177f161d18291daf772b69b37f5a4fcf0f17d13402fd214a51a",
+        "best_validation_dice": 0.8678123061242637,
+        "best_validation_epoch": 8,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-cdes",
+        "epochs_completed": 8
+      },
+      "dual_full_symmetric": {
+        "checkpoint_file": "heads/seed123_dual_full_symmetric.npz",
+        "checkpoint_sha256": "287ee38f7e160cccd11ea21877758febb2256ede75e00c1828a88b538da04370",
+        "best_validation_dice": 0.8664342076821198,
+        "best_validation_epoch": 2,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-cdes",
+        "epochs_completed": 8
+      },
+      "dual_geometry": {
+        "checkpoint_file": "heads/seed123_dual_geometry.npz",
+        "checkpoint_sha256": "a449403cced00adddaaa8ae1ee6bd082cac82bd0e68b9737f8fc2e49d0cfcf45",
+        "best_validation_dice": 0.8640993643084438,
+        "best_validation_epoch": 5,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-routing",
+        "epochs_completed": 8
+      },
+      "dual_confidence": {
+        "checkpoint_file": "heads/seed123_dual_confidence.npz",
+        "checkpoint_sha256": "b5289bca04b7ec63be177ec71c4f00546a994992a7afaf88ff4e37d1abdd4093",
+        "best_validation_dice": 0.8658650429990753,
+        "best_validation_epoch": 4,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-routing",
+        "epochs_completed": 8
+      },
+      "dual_full_asymmetric": {
+        "checkpoint_file": "heads/seed123_dual_full_asymmetric.npz",
+        "checkpoint_sha256": "023ff4a04e67f8151aa5929603dfcf09ceb317cb93cf1b17371b6963fc924432",
+        "best_validation_dice": 0.866456985242623,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed123-routing",
+        "epochs_completed": 8
+      }
+    },
+    "2025": {
+      "natural_full_symmetric": {
+        "checkpoint_file": "heads/seed2025_natural_full_symmetric.npz",
+        "checkpoint_sha256": "bd5aee160683841400b4f4a474009d1fb79719350e189721ef6d41456194196c",
+        "best_validation_dice": 0.8569453616431673,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed2025-cdes",
+        "epochs_completed": 8
+      },
+      "break_only": {
+        "checkpoint_file": "heads/seed2025_break_only.npz",
+        "checkpoint_sha256": "a6558a51badc37da8ddaf73684ad3e6432ec73fba87ee159b9b0015b2559096f",
+        "best_validation_dice": 0.8576953808440945,
+        "best_validation_epoch": 4,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed2025-cdes",
+        "epochs_completed": 8
+      },
+      "false_only": {
+        "checkpoint_file": "heads/seed2025_false_only.npz",
+        "checkpoint_sha256": "db161fbbd4ba9a6b29437fcd18a7964e386b7b2d8967f952e20bea3a343fa12c",
+        "best_validation_dice": 0.8573609456252834,
+        "best_validation_epoch": 8,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed2025-cdes",
+        "epochs_completed": 8
+      },
+      "dual_full_symmetric": {
+        "checkpoint_file": "heads/seed2025_dual_full_symmetric.npz",
+        "checkpoint_sha256": "995e006dc36fbca0f41873119fb7409325e3502f5d6ff2b27fbaf8dcf7029049",
+        "best_validation_dice": 0.8568354866340568,
+        "best_validation_epoch": 1,
+        "checkpoint_source": "ardhanabdillah/cetr-v2-full-refiner-seed2025-cdes",
+        "epochs_completed": 8
+      },
+      "dual_geometry": {
+        "checkpoint_file": "heads/seed2025_dual_geometry.npz",
+        "checkpoint_sha256": "69f6adc8acdf6d8d66ba2299fccd93cc041a7daca9a8313deb328ed47fda162b",
+        "best_validation_dice": 0.8541222969332763,
+        "best_validation_epoch": 4,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed2025-routing",
+        "epochs_completed": 8
+      },
+      "dual_confidence": {
+        "checkpoint_file": "heads/seed2025_dual_confidence.npz",
+        "checkpoint_sha256": "689e5efe5515f7cf4642bc23e8deb3443ce9b011b9fe0caa48c4ae0fe4e0871f",
+        "best_validation_dice": 0.8562766275598924,
+        "best_validation_epoch": 2,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed2025-routing",
+        "epochs_completed": 8
+      },
+      "dual_full_asymmetric": {
+        "checkpoint_file": "heads/seed2025_dual_full_asymmetric.npz",
+        "checkpoint_sha256": "4d7d9181cb6303f0b86e6f798461bae1a201aaba625f5115a29921ea3bb4dc33",
+        "best_validation_dice": 0.8567961616064461,
+        "best_validation_epoch": 2,
+        "checkpoint_source": "agusperdana/cetr-v2-full-refiner-seed2025-routing",
+        "epochs_completed": 8
+      }
+    }
+  },
+  "inference_protocol": "prediction_only_before_any_ground_truth_access; no test-time GT-conditioned proposals; no TTA and no post-test threshold changes",
+  "rules": [
+    "One fixed test execution per seed over all 7 predefined ablations; no test-based model selection",
+    "Do NOT change threshold, weights, variants, model choice, or interpretation based on official-test labels",
+    "Never use official test to train or validate",
+    "Do not imply significance without CI or corrected hypotheses",
+    "Do not claim superiority over other SOTA without protocol-matched independent baseline results"
+  ]
+}
