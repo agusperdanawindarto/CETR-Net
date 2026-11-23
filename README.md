@@ -58,3 +58,7 @@ The independent model backbone is trained separately for each seed. Routing/head
 ## Top-tier IEEE revision and source-traceable FIVES results
 
 Revised manuscript and Mendeley-ready BibTeX: manuscript/. Research integrity audit: docs/TOP_TIER_V4_AUDIT.md. Three real fixed-ID qualitative FIVES test panels are archived in figures/qualitative/, attributable to Jin et al. (2022), CC BY 4.0. Full underlying raw dataset archives and private masks remain excluded. The updated paper does NOT claim superiority. Live Mendeley fields require the author's signed-in Word Mendeley Cite session; static manuscript citations are NOT dynamically linked.
+
+## Current manuscript (Top Tier V5, 23 November 2026)
+
+The [IEEE Access Word V5](manuscript/CETR-Net_IEEE_TopTier_Revised_V5.docx) and [PDF proof V5](manuscript/CETR-Net_IEEE_TopTier_Revised_V5.pdf) resolve stale RQ3 cross-dataset/efficiency statements and reconcile native Eq. (11) with the 197-group aggregation rule. The [V5 research audit](docs/TOP_TIER_V5_AUDIT.md) documents verified results and outstanding Mendeley Cite linkage. Quantitative evidence and original FIVES qualitative figures are unchanged from V4.
