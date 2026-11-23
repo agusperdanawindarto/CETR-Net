@@ -54,3 +54,7 @@ The independent model backbone is trained separately for each seed. Routing/head
 **Publishing note:** FIVES raw RGB photographs, binary reference masks, Kaggle private datasets, user credentials, checkpoint binaries and any sensitive original records are intentionally excluded. Download the licensed FIVES source separately and verify hashes before reuse. The official test must not be revisited for parameter selection after seeing these outcomes.
 
 **IEEE manuscript:** The manuscript may report the *negative evidence* but should not claim superiority. Source citations and prior-method bibliographic entries require editorial audit before submission.
+
+## Top-tier IEEE revision and source-traceable FIVES results
+
+Revised manuscript and Mendeley-ready BibTeX: manuscript/. Research integrity audit: docs/TOP_TIER_V4_AUDIT.md. Three real fixed-ID qualitative FIVES test panels are archived in figures/qualitative/, attributable to Jin et al. (2022), CC BY 4.0. Full underlying raw dataset archives and private masks remain excluded. The updated paper does NOT claim superiority. Live Mendeley fields require the author's signed-in Word Mendeley Cite session; static manuscript citations are NOT dynamically linked.
