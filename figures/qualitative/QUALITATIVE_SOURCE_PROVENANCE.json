@@ -1,0 +1,55 @@
+{
+  "dataset": "FIVES (Jin et al. 2022), license see official distribution",
+  "seed": 42,
+  "fixed_cases": [
+    {
+      "case_id": "001",
+      "source_path": "D:\\RISETKOLABORASI\\CETR-Net\\EXPERIMEN\\RESULTS_KAGGLE\\OFFICIAL_TEST_V2\\seed_42\\CETR_OFFICIAL_TEST_V2\\qualitative_fixed_ids\\001_input_GT_backbone_proposed.png",
+      "source_sha256": "fe3038128f45f53b8a24c1762173553ba0450fb0128779d33c4290c635477ba1",
+      "source_pixels": [
+        2048,
+        512
+      ],
+      "figure_file": "Fig8_case_001_official_test_FIVES.png",
+      "panels": [
+        "Fundus image",
+        "Reference mask",
+        "Frozen backbone",
+        "CETR-Net (primary)"
+      ]
+    },
+    {
+      "case_id": "080",
+      "source_path": "D:\\RISETKOLABORASI\\CETR-Net\\EXPERIMEN\\RESULTS_KAGGLE\\OFFICIAL_TEST_V2\\seed_42\\CETR_OFFICIAL_TEST_V2\\qualitative_fixed_ids\\080_input_GT_backbone_proposed.png",
+      "source_sha256": "7aa849392900fde704ab98a545525ee333cabd6f5be43f305f146a40260c152f",
+      "source_pixels": [
+        2048,
+        512
+      ],
+      "figure_file": "Fig8_case_080_official_test_FIVES.png",
+      "panels": [
+        "Fundus image",
+        "Reference mask",
+        "Frozen backbone",
+        "CETR-Net (primary)"
+      ]
+    },
+    {
+      "case_id": "160",
+      "source_path": "D:\\RISETKOLABORASI\\CETR-Net\\EXPERIMEN\\RESULTS_KAGGLE\\OFFICIAL_TEST_V2\\seed_42\\CETR_OFFICIAL_TEST_V2\\qualitative_fixed_ids\\160_input_GT_backbone_proposed.png",
+      "source_sha256": "558d00bb90a9283a5b3827f4fda484567601826d919e42e6515205312c7a6ca8",
+      "source_pixels": [
+        2048,
+        512
+      ],
+      "figure_file": "Fig8_case_160_official_test_FIVES.png",
+      "panels": [
+        "Fundus image",
+        "Reference mask",
+        "Frozen backbone",
+        "CETR-Net (primary)"
+      ]
+    }
+  ],
+  "description": "Unmodified image slices from frozen test outputs; only transposed into labeled 2x2 panels, no mask editing, no score-based selection."
+}
